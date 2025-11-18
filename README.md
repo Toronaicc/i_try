@@ -1,27 +1,7 @@
-# https://fs.top-academy.ru/api/v1/files/hTBPweFdebS6eiPmwGCgWbLlerOJ_roL
-
-https://alice.yandex.ru/
-
-
-script.Parent.Touched:Connect(function(hit)
-    if hit.Parent:FindFirstChild("Humanoid") then
-        hit.Parent.Humanoid.Health = 0
-    end
+game.Players.PlayerAdded:Connect(function(plr)
+local ls = Instance.new("Folder",plr)
+ls.Name = "leaderstats"
+local clicks = Instance.new("IntValue",ls)
+clicks.Name = "Taps"
+clicks.Value = 0
 end)
-
-
-
-
-script.Parent.Touched:Connect(function(hit)
-    if game.Players:GetPlayerFromCharacter(hit.Parent) then
-    if script.Parent.Locked == false and script.Parent.Parent.Teleport2.Locked == false then
-        script.Parent.Locked = true
-        script.Parent.Parent.Teleport2.Locked = true
-        hit.Parent:MoveTo(workspace.Teleport2.Position)
-        wait(1)
-        script.Parent.Locked = false
-        script.Parent.Parent.Teleport2.Locked = false
-        end
-    end
-end)
-
