@@ -24,3 +24,10 @@ clicks.Value += 1
 wait(T)
 de = false
 end)
+
+
+
+local clicks = game.Players.LocalPlayer.leaderstats.Taps
+while wait() do
+script.Parent.Text = "Taps: " .. clicks.Value
+end
