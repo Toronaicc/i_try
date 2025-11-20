@@ -39,3 +39,13 @@ end
 script.Parent.MouseButton1Click:Connect(function()
     script.Parent.Parent.Frame.Visible = true
 end)
+
+
+
+
+
+
+
+script.Parent.MouseButton1Click:Connect(function()
+    script.Parent.Parent.Parent.Frame.Visible = false
+end)
