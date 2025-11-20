@@ -31,3 +31,11 @@ local clicks = game.Players.LocalPlayer.leaderstats.Taps
 while wait() do
 script.Parent.Text = "Taps: " .. clicks.Value
 end
+
+
+
+
+
+script.Parent.MouseButton1Click:Connect(function()
+    script.Parent.Parent.Frame.Visible = true
+end)
